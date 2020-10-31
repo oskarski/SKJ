@@ -22,6 +22,10 @@ public class HTTPResponseStatusLine {
         return new HTTPResponseStatusLine(matcher.group(1), Integer.parseInt(matcher.group(2)), matcher.group(3));
     }
 
+    public static HTTPResponseStatusLine fromProtocolAndStatus(String protocolVersion, int status, String statusName) {
+        return new HTTPResponseStatusLine(protocolVersion, status, statusName);
+    }
+
     @Override
     public String toString() {
         return this.protocolVersion + " " + this.status + " " + this.statusName;

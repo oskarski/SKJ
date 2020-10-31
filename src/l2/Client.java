@@ -22,7 +22,8 @@ public class Client {
     }
 
     public static void run() {
-        Client client = new Client("gaia.cs.umass.edu", 80);
+//        Client client = new Client("gaia.cs.umass.edu", 80);
+        Client client = new Client("localhost", 2137);
 
         InetAddress serverAddress = client.resolveServerAddress();
         client.createSocketConnection(serverAddress);

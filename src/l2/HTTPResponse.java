@@ -22,4 +22,8 @@ public class HTTPResponse {
     public String getBody() {
         return body;
     }
+
+    public String toString() {
+        return this.statusLine + "\r\n" + this.headers + "\r\n" + body + "\r\n";
+    }
 }
